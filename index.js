@@ -9,5 +9,5 @@ let app = express();
 
 app.use('/graphql', graphQLExpress({
     schema,
-
+    graphiql: true
 }));

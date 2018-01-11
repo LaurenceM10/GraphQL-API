@@ -14,3 +14,5 @@ const schema = new GraphQLSchema({
         fields: queries
     })
 });
+
+module.exports = schema;
