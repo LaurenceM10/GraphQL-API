@@ -8,10 +8,6 @@ let taskSchema = new  mongoose.Schema({
     },
     description: {
         type: String
-    },
-    timeLimit: {
-        type: Date,
-        required: true
     }
 });
 

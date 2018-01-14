@@ -14,7 +14,7 @@ const TaskQuery = new GraphQLObjectType({
     type: new GraphQLList(TaskType),
     args: {},
     resolve(root, params) {
-        return 'Datos';
+        return TaskModel.find({});
     }
 });
 
