@@ -11,3 +11,7 @@ app.use('/graphql', graphQLExpress({
     schema,
     graphiql: true
 }));
+
+app.listen(4000, () => {
+   console.log('Running');
+});

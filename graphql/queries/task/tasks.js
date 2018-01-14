@@ -2,7 +2,6 @@ const {
     GraphQLObjectType,
     GraphQLList
 } = require('graphql/index');
-const {Types} = require('graphql/queries/task/tasks');
 
 //Require the task model
 const TaskModel = require('../../../models/task');
@@ -10,14 +9,14 @@ const TaskModel = require('../../../models/task');
 //Require the GraphQL Type
 const TaskType = require('../../types/task');
 
-
 const TaskQuery = new GraphQLObjectType({
+    name: 'Tasks',
     type: new GraphQLList(TaskType),
     args: {},
     resolve(root, params) {
-        return TaskModel.find({});
+        return 'Datos';
     }
 });
 
 
-module.exports = {TaskQuery};
+module.exports = TaskQuery;
