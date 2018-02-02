@@ -11,7 +11,9 @@ const queries = require('./queries');
 const schema = new GraphQLSchema({
     query: new GraphQLObjectType({
         name: 'Query',
-        fields: queries
+        fields: {
+            queries
+        }
     })
 });
 

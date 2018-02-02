@@ -13,7 +13,7 @@ const TaskQuery = new GraphQLObjectType({
     name: 'Tasks',
     type: new GraphQLList(TaskType),
     args: {},
-    resolve(root, params) {
+    resolve(root, params, options) {
         return TaskModel.find({});
     }
 });
