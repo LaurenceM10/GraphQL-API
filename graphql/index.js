@@ -8,7 +8,7 @@ const queries = require('./queries');
 
 
 //Create the GraphQL Schema
-const schema = new GraphQLSchema({
+const TaskQuery = new GraphQLSchema({
     query: new GraphQLObjectType({
         name: 'Query',
         fields: {
@@ -17,4 +17,4 @@ const schema = new GraphQLSchema({
     })
 });
 
-module.exports = schema;
+module.exports = TaskQuery;

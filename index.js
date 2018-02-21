@@ -5,7 +5,6 @@ const mongoose = require('mongoose');
 //Require the GraphQL Schema
 const schema = require('./graphql');
 
-//Instance express
 let app = express();
 
 app.use('/graphql', graphQLExpress({
@@ -16,10 +15,10 @@ app.use('/graphql', graphQLExpress({
 //Create connection to mongodb with mongoose
 mongoose.connect("mongodb://localhost:27017/graphql", (error, res) => {
     if (error){
-        return res.send(500, {message : 'Error'});
+        return res.send(500, { message : 'Error' });
     } else {
         app.listen(4000, () => {
-            console.log('Running');
+            console.log('Running on port 4000');
         });
     }
 });
