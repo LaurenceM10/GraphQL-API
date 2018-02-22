@@ -9,15 +9,16 @@ const TaskModel = require('../../../models/task');
 //Require the GraphQL Type
 const TaskType = require('../../types/task');
 
-const TaskQuery = new GraphQLObjectType({
+const TaskQuery = {
     name: 'Tasks',
     description: 'To get all the tasks',
     type: new GraphQLList(TaskType),
     args: {},
     resolve() {
+    	console.log(TaskModel.find({}));
         return TaskModel.find({});
     }
-});
+};
 
 
 module.exports = TaskQuery;
