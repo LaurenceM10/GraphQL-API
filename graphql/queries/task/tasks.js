@@ -15,10 +15,8 @@ const TaskQuery = {
     type: new GraphQLList(TaskType),
     args: {},
     resolve() {
-    	console.log(TaskModel.find({}));
-        return TaskModel.find({});
+        return TaskModel.find({}).exec();
     }
 };
-
 
 module.exports = TaskQuery;
